@@ -19,6 +19,15 @@
 		E15B78DC1A5E184400CF9A67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15B78C41A5E184400CF9A67 /* UIKit.framework */; };
 		E15B78E41A5E184400CF9A67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E15B78E21A5E184400CF9A67 /* InfoPlist.strings */; };
 		E15B78E61A5E184400CF9A67 /* EmptyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B78E51A5E184400CF9A67 /* EmptyAppTests.m */; };
+		E15B78F11A5E193100CF9A67 /* MyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B78F01A5E193100CF9A67 /* MyMainViewController.m */; };
+		E15B78F41A5E385C00CF9A67 /* MyHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B78F31A5E385C00CF9A67 /* MyHttpRequest.m */; };
+		E15B78F81A5E3C3100CF9A67 /* MyConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B78F71A5E3C3100CF9A67 /* MyConstants.m */; };
+		E16FC7FA1A63361A002464A8 /* MyLogInControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC7F91A63361A002464A8 /* MyLogInControllerViewController.m */; };
+		E16FC7FD1A6352ED002464A8 /* MyDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC7FC1A6352ED002464A8 /* MyDownloadManager.m */; };
+		E16FC8001A6354EF002464A8 /* MyDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC7FF1A6354EF002464A8 /* MyDataHandler.m */; };
+		E16FC8061A635D0A002464A8 /* MyBoardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC8051A635D0A002464A8 /* MyBoardHandler.m */; };
+		E16FC80A1A635D31002464A8 /* MyPinHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC8091A635D31002464A8 /* MyPinHandler.m */; };
+		E16FC80D1A637281002464A8 /* MyUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC80C1A637281002464A8 /* MyUserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,25 @@
 		E15B78E11A5E184400CF9A67 /* EmptyAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmptyAppTests-Info.plist"; sourceTree = "<group>"; };
 		E15B78E31A5E184400CF9A67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E15B78E51A5E184400CF9A67 /* EmptyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyAppTests.m; sourceTree = "<group>"; };
+		E15B78EF1A5E193100CF9A67 /* MyMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMainViewController.h; sourceTree = "<group>"; };
+		E15B78F01A5E193100CF9A67 /* MyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMainViewController.m; sourceTree = "<group>"; };
+		E15B78F21A5E385C00CF9A67 /* MyHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHttpRequest.h; sourceTree = "<group>"; };
+		E15B78F31A5E385C00CF9A67 /* MyHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHttpRequest.m; sourceTree = "<group>"; };
+		E15B78F51A5E3AD000CF9A67 /* MyHttpRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHttpRequestDelegate.h; sourceTree = "<group>"; };
+		E15B78F61A5E3C3100CF9A67 /* MyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConstants.h; sourceTree = "<group>"; };
+		E15B78F71A5E3C3100CF9A67 /* MyConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyConstants.m; sourceTree = "<group>"; };
+		E16FC7F81A63361A002464A8 /* MyLogInControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInControllerViewController.h; sourceTree = "<group>"; };
+		E16FC7F91A63361A002464A8 /* MyLogInControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInControllerViewController.m; sourceTree = "<group>"; };
+		E16FC7FB1A6352EC002464A8 /* MyDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDownloadManager.h; sourceTree = "<group>"; };
+		E16FC7FC1A6352ED002464A8 /* MyDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDownloadManager.m; sourceTree = "<group>"; };
+		E16FC7FE1A6354EF002464A8 /* MyDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataHandler.h; sourceTree = "<group>"; };
+		E16FC7FF1A6354EF002464A8 /* MyDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataHandler.m; sourceTree = "<group>"; };
+		E16FC8041A635D0A002464A8 /* MyBoardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBoardHandler.h; sourceTree = "<group>"; };
+		E16FC8051A635D0A002464A8 /* MyBoardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBoardHandler.m; sourceTree = "<group>"; };
+		E16FC8081A635D31002464A8 /* MyPinHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPinHandler.h; sourceTree = "<group>"; };
+		E16FC8091A635D31002464A8 /* MyPinHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPinHandler.m; sourceTree = "<group>"; };
+		E16FC80B1A637281002464A8 /* MyUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUserInfo.h; sourceTree = "<group>"; };
+		E16FC80C1A637281002464A8 /* MyUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUserInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +135,17 @@
 		E15B78C61A5E184400CF9A67 /* EmptyApp */ = {
 			isa = PBXGroup;
 			children = (
-				E15B78CF1A5E184400CF9A67 /* MyAppDelegate.h */,
-				E15B78D01A5E184400CF9A67 /* MyAppDelegate.m */,
 				E15B78D21A5E184400CF9A67 /* Images.xcassets */,
 				E15B78C71A5E184400CF9A67 /* Supporting Files */,
+				E15B78CF1A5E184400CF9A67 /* MyAppDelegate.h */,
+				E15B78D01A5E184400CF9A67 /* MyAppDelegate.m */,
+				E16FC8011A63596D002464A8 /* handlers */,
+				E16FC8021A635986002464A8 /* controllers */,
+				E16FC8031A6359BE002464A8 /* network */,
+				E15B78F61A5E3C3100CF9A67 /* MyConstants.h */,
+				E15B78F71A5E3C3100CF9A67 /* MyConstants.m */,
+				E16FC80B1A637281002464A8 /* MyUserInfo.h */,
+				E16FC80C1A637281002464A8 /* MyUserInfo.m */,
 			);
 			path = EmptyApp;
 			sourceTree = "<group>";
@@ -142,6 +177,42 @@
 				E15B78E21A5E184400CF9A67 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E16FC8011A63596D002464A8 /* handlers */ = {
+			isa = PBXGroup;
+			children = (
+				E16FC7FE1A6354EF002464A8 /* MyDataHandler.h */,
+				E16FC7FF1A6354EF002464A8 /* MyDataHandler.m */,
+				E16FC8041A635D0A002464A8 /* MyBoardHandler.h */,
+				E16FC8051A635D0A002464A8 /* MyBoardHandler.m */,
+				E16FC8081A635D31002464A8 /* MyPinHandler.h */,
+				E16FC8091A635D31002464A8 /* MyPinHandler.m */,
+			);
+			name = handlers;
+			sourceTree = "<group>";
+		};
+		E16FC8021A635986002464A8 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E16FC7F81A63361A002464A8 /* MyLogInControllerViewController.h */,
+				E16FC7F91A63361A002464A8 /* MyLogInControllerViewController.m */,
+				E15B78EF1A5E193100CF9A67 /* MyMainViewController.h */,
+				E15B78F01A5E193100CF9A67 /* MyMainViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		E16FC8031A6359BE002464A8 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				E15B78F51A5E3AD000CF9A67 /* MyHttpRequestDelegate.h */,
+				E16FC7FB1A6352EC002464A8 /* MyDownloadManager.h */,
+				E16FC7FC1A6352ED002464A8 /* MyDownloadManager.m */,
+				E15B78F21A5E385C00CF9A67 /* MyHttpRequest.h */,
+				E15B78F31A5E385C00CF9A67 /* MyHttpRequest.m */,
+			);
+			name = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16FC8001A6354EF002464A8 /* MyDataHandler.m in Sources */,
+				E15B78F11A5E193100CF9A67 /* MyMainViewController.m in Sources */,
+				E16FC80D1A637281002464A8 /* MyUserInfo.m in Sources */,
 				E15B78D11A5E184400CF9A67 /* MyAppDelegate.m in Sources */,
+				E15B78F81A5E3C3100CF9A67 /* MyConstants.m in Sources */,
 				E15B78CD1A5E184400CF9A67 /* main.m in Sources */,
+				E16FC7FA1A63361A002464A8 /* MyLogInControllerViewController.m in Sources */,
+				E16FC7FD1A6352ED002464A8 /* MyDownloadManager.m in Sources */,
+				E15B78F41A5E385C00CF9A67 /* MyHttpRequest.m in Sources */,
+				E16FC80A1A635D31002464A8 /* MyPinHandler.m in Sources */,
+				E16FC8061A635D0A002464A8 /* MyBoardHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +520,7 @@
 				E15B78EB1A5E184400CF9A67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E15B78EC1A5E184400CF9A67 /* Build configuration list for PBXNativeTarget "EmptyAppTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +529,7 @@
 				E15B78EE1A5E184400CF9A67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
