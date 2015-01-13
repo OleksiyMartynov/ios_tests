@@ -28,6 +28,11 @@
 		E16FC8061A635D0A002464A8 /* MyBoardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC8051A635D0A002464A8 /* MyBoardHandler.m */; };
 		E16FC80A1A635D31002464A8 /* MyPinHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC8091A635D31002464A8 /* MyPinHandler.m */; };
 		E16FC80D1A637281002464A8 /* MyUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E16FC80C1A637281002464A8 /* MyUserInfo.m */; };
+		E1DF05AD1A64C7DA00B3200E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1DF05AB1A64C7DA00B3200E /* Model.xcdatamodeld */; };
+		E1DF05BF1A64CDD300B3200E /* MyDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DF05BE1A64CDD300B3200E /* MyDataManager.m */; };
+		E1DF05C21A64D07700B3200E /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DF05C11A64D07700B3200E /* Board.m */; };
+		E1DF05C51A64D07700B3200E /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DF05C41A64D07700B3200E /* Pin.m */; };
+		E1DF05C81A64D7E600B3200E /* TestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DF05C71A64D7E600B3200E /* TestEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,15 @@
 		E16FC8091A635D31002464A8 /* MyPinHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPinHandler.m; sourceTree = "<group>"; };
 		E16FC80B1A637281002464A8 /* MyUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUserInfo.h; sourceTree = "<group>"; };
 		E16FC80C1A637281002464A8 /* MyUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUserInfo.m; sourceTree = "<group>"; };
+		E1DF05AC1A64C7DA00B3200E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E1DF05BD1A64CDD300B3200E /* MyDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataManager.h; sourceTree = "<group>"; };
+		E1DF05BE1A64CDD300B3200E /* MyDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataManager.m; sourceTree = "<group>"; };
+		E1DF05C01A64D07700B3200E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		E1DF05C11A64D07700B3200E /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		E1DF05C31A64D07700B3200E /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pin.h; sourceTree = "<group>"; };
+		E1DF05C41A64D07700B3200E /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pin.m; sourceTree = "<group>"; };
+		E1DF05C61A64D7E600B3200E /* TestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEntity.h; sourceTree = "<group>"; };
+		E1DF05C71A64D7E600B3200E /* TestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +149,9 @@
 		E15B78C61A5E184400CF9A67 /* EmptyApp */ = {
 			isa = PBXGroup;
 			children = (
+				E1DF05BC1A64CDB600B3200E /* storage */,
 				E15B78D21A5E184400CF9A67 /* Images.xcassets */,
+				E1DF05AE1A64C9EC00B3200E /* models */,
 				E15B78C71A5E184400CF9A67 /* Supporting Files */,
 				E15B78CF1A5E184400CF9A67 /* MyAppDelegate.h */,
 				E15B78D01A5E184400CF9A67 /* MyAppDelegate.m */,
@@ -146,6 +162,7 @@
 				E15B78F71A5E3C3100CF9A67 /* MyConstants.m */,
 				E16FC80B1A637281002464A8 /* MyUserInfo.h */,
 				E16FC80C1A637281002464A8 /* MyUserInfo.m */,
+				E1DF05AB1A64C7DA00B3200E /* Model.xcdatamodeld */,
 			);
 			path = EmptyApp;
 			sourceTree = "<group>";
@@ -213,6 +230,28 @@
 				E15B78F31A5E385C00CF9A67 /* MyHttpRequest.m */,
 			);
 			name = network;
+			sourceTree = "<group>";
+		};
+		E1DF05AE1A64C9EC00B3200E /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E1DF05C31A64D07700B3200E /* Pin.h */,
+				E1DF05C41A64D07700B3200E /* Pin.m */,
+				E1DF05C01A64D07700B3200E /* Board.h */,
+				E1DF05C11A64D07700B3200E /* Board.m */,
+				E1DF05C61A64D7E600B3200E /* TestEntity.h */,
+				E1DF05C71A64D7E600B3200E /* TestEntity.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		E1DF05BC1A64CDB600B3200E /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				E1DF05BD1A64CDD300B3200E /* MyDataManager.h */,
+				E1DF05BE1A64CDD300B3200E /* MyDataManager.m */,
+			);
+			name = storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DF05C21A64D07700B3200E /* Board.m in Sources */,
 				E16FC8001A6354EF002464A8 /* MyDataHandler.m in Sources */,
+				E1DF05BF1A64CDD300B3200E /* MyDataManager.m in Sources */,
+				E1DF05C51A64D07700B3200E /* Pin.m in Sources */,
+				E1DF05C81A64D7E600B3200E /* TestEntity.m in Sources */,
 				E15B78F11A5E193100CF9A67 /* MyMainViewController.m in Sources */,
 				E16FC80D1A637281002464A8 /* MyUserInfo.m in Sources */,
 				E15B78D11A5E184400CF9A67 /* MyAppDelegate.m in Sources */,
@@ -322,6 +365,7 @@
 				E15B78F41A5E385C00CF9A67 /* MyHttpRequest.m in Sources */,
 				E16FC80A1A635D31002464A8 /* MyPinHandler.m in Sources */,
 				E16FC8061A635D0A002464A8 /* MyBoardHandler.m in Sources */,
+				E1DF05AD1A64C7DA00B3200E /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +576,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E1DF05AB1A64C7DA00B3200E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E1DF05AC1A64C7DA00B3200E /* Model.xcdatamodel */,
+			);
+			currentVersion = E1DF05AC1A64C7DA00B3200E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E15B78B51A5E184300CF9A67 /* Project object */;
 }

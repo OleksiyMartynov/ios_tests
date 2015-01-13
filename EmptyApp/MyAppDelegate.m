@@ -9,10 +9,21 @@
 #import "MyAppDelegate.h"
 #import "MyMainViewController.h"
 #import "MyLogInControllerViewController.h"
+#import "MyDataManager.h"
+@interface MyAppDelegate()
+
+@end
 @implementation MyAppDelegate
+
++(instancetype)sharedInstance
+{
+    return (MyAppDelegate*)[[UIApplication sharedApplication]delegate];
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -25,6 +36,7 @@
     MyLogInControllerViewController* loginController =[[MyLogInControllerViewController alloc]init];
     self.window.rootViewController=loginController;
     [self.window makeKeyAndVisible];
+    [[MyDataManager alloc]init];
     return YES;
 }
 
