@@ -6,53 +6,96 @@
 //  Copyright (c) 2015 Oleksiy Martynov. All rights reserved.
 //
 
+
+
 #import "MyDataManager.h"
 #import "TestEntity.h"
+//#import <dispatch/dispatch.h>
+
+
+dispatch_queue_t background_save_queue(void);
+
+ static dispatch_queue_t coredata_background_save_queue;
+
+dispatch_queue_t background_save_queue()
+{
+    if (coredata_background_save_queue == NULL)
+    {
+        coredata_background_save_queue = dispatch_queue_create("com.magicalpanda.magicalrecord.backgroundsaves", 0);
+    }
+    return coredata_background_save_queue;
+}
+
+
 @interface MyDataManager()
+
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @end
 @implementation MyDataManager
 
++(instancetype)sharedInstance
+{
+    static MyDataManager* instance =nil;
+    if(!instance)
+    {
+        instance = [[MyDataManager alloc]init];
+    }
+    return instance;
+}
 -(instancetype)init
 {
     if((self=[super init]))
     {
-        //store
-        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"TestEntity" inManagedObjectContext:self.managedObjectContext];
-        NSManagedObject *newEntity = [[NSManagedObject alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:self.managedObjectContext];
-        [newEntity setValue:@"blah" forKey:@"attr"];
-        NSError *error = nil;
         
-        if (![newEntity.managedObjectContext save:&error]) {
-            NSLog(@"Unable to save managed object context.");
-            NSLog(@"%@, %@", error, error.localizedDescription);
-        }
-        
-        //fetch
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"TestEntity" inManagedObjectContext:self.managedObjectContext];
-        [fetchRequest setEntity:entity];
-        
-        NSError *error2 = nil;
-        NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error2];
-        
-        if (error2) {
-            NSLog(@"Unable to execute fetch request.");
-            NSLog(@"%@, %@", error2, error2.localizedDescription);
-            
-        } else {
-            for(TestEntity* obj in result)
-            {
-                NSLog(@"Test Entity attr=%@",obj.attr);
-            }
-    }
     }
     return self;
 }
-
+-(void)saveDataInBackgroundWithContext:(void(^)(NSManagedObjectContext *context))saveBlock completion:(void(^)(void))completion errorBlock: (void(^)(NSError* error))errorBlock
+{
+    dispatch_async(background_save_queue(), ^{
+        NSError* error = nil;
+		[self saveDataInContext:saveBlock error:&error];
+        
+		dispatch_sync(dispatch_get_main_queue(), ^{
+			if(error){
+                errorBlock(error);
+            }
+            else{
+                completion();
+            }
+		});
+        
+	});
+}
+-(void)saveDataInBackgroundWithContext:(void(^)(NSManagedObjectContext *context))saveBlock completion:(void(^)(void))completion
+{
+    dispatch_async(background_save_queue(), ^{
+		[self saveDataInContext:saveBlock];
+        
+		dispatch_sync(dispatch_get_main_queue(), ^{
+			completion();
+		});
+	});
+}
+-(void)saveDataInContext:(void(^)(NSManagedObjectContext *context))saveBlock
+{
+    saveBlock(self.managedObjectContext);
+    NSError* error=nil;
+    if([self.managedObjectContext hasChanges])
+    {
+        [self.managedObjectContext save:&error];
+    }
+}
+-(void)saveDataInContext:(void(^)(NSManagedObjectContext *context))saveBlock error:(NSError**) error
+{
+    saveBlock(self.managedObjectContext);
+    if([self.managedObjectContext hasChanges])
+    {
+        [self.managedObjectContext save:error];
+    }
+}
 - (NSManagedObjectContext *)managedObjectContext
 {
     if (_managedObjectContext != nil) {

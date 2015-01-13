@@ -25,6 +25,7 @@
     [request setHeaderField:kPinterestApiKey value:kPinterestApiValue];
     void(^parsedCompletion)(id )=^void(id data){
         NSError* error;
+        NSLog(@"blah!->%@",data);
         id outData = [self processData:data error:&error];
         if(error){
             NSMutableDictionary* details = [[NSMutableDictionary alloc]init];

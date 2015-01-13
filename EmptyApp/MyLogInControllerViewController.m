@@ -10,6 +10,7 @@
 #import "MyHttpRequest.h"
 #import "MyUserInfo.h"
 #import "MyDownloadManager.h"
+
 @interface MyLogInControllerViewController ()
 @property (strong, nonatomic) UITextField* textBox;
 @end
@@ -57,15 +58,18 @@
         //geting boards
         [[MyDownloadManager sharedInstance]makeApiCall:kGetBoards completion:^(NSString *data) {
             NSLog(@"s");
+            
+                          
         } failure:^(long errorCode, NSError *errorObj) {
             NSLog(@"f");
         }];
         //getting pins
+        /*
         [[MyDownloadManager sharedInstance]makeApiCall:kGetPins completion:^(NSString *data) {
             NSLog(@"s");
         } failure:^(long errorCode, NSError *errorObj) {
             NSLog(@"f");
-        }];
+        }];*/
     }
     
 }

@@ -36,7 +36,6 @@
     MyLogInControllerViewController* loginController =[[MyLogInControllerViewController alloc]init];
     self.window.rootViewController=loginController;
     [self.window makeKeyAndVisible];
-    [[MyDataManager alloc]init];
     return YES;
 }
 

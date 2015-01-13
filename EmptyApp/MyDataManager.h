@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface MyDataManager : NSObject
++(instancetype)sharedInstance;
 -(instancetype)init;
 - (NSManagedObjectContext *)managedObjectContext;
 - (NSManagedObjectModel *)managedObjectModel;
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+-(void)saveDataInBackgroundWithContext:(void(^)(NSManagedObjectContext *context))saveBlock completion:(void(^)(void))completion errorBlock: (void(^)(NSError* error))errorBlock;
+-(void)saveDataInBackgroundWithContext:(void(^)(NSManagedObjectContext *context))saveBlock completion:(void(^)(void))completion;
+-(void)saveDataInContext:(void(^)(NSManagedObjectContext *context))saveBlock error:(NSError**) error;
+-(void)saveDataInContext:(void(^)(NSManagedObjectContext *context))saveBlock;
 @end
